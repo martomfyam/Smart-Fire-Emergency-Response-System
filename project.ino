@@ -45,8 +45,8 @@ String button;
 int buttonv = 1;
 String userMessage = "There is a fire incident in your home";
 String userNumber = "+254792020946";
-String marshalMessage = "Fire incident at House number 6,| location -> googlemaps.com";
-String marshalNumber = "+254770728779";
+String marshalMessage = "There is a fire incident at location: https://maps.google.com/?q=B+6&ftid=0x0:0x295ec34e4cc21fde . House registered to : Martin Tel: +254792020946";
+String marshalNumber = "+254724757880";  //fire marshal contact
 String alarmStatus;
 int now;
 int initialTime;
@@ -154,6 +154,7 @@ if (alarmStatus == "set" ){
   digitalWrite(greenLED, HIGH);        // Green LED on, everything is go.
   delay(100);
   digitalWrite(greenLED, LOW);
+  //check readings of smoke sensor against set threshold
  if(analogRead(smokeA2)> 250){
   smokefunction();
  }
